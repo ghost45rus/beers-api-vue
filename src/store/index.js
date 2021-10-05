@@ -28,7 +28,9 @@ const actions = {
 
 
     deleteBeer({state}, beer){
-        state.beers = state.beers.filter((item) => item.id !== beer.id)
+
+        state.beers = state.beers.filter((item) => item.beer.id !== beer.id)
+        console.log(state.beers)
     },
     //Экшен получения пива и добавления в стор
     async getBeers({state}){
