@@ -28,8 +28,7 @@ const actions = {
 
 
     deleteBeer({state}, beer){
-      let findedPage = state.pages.find(item => item.page == beer.page)
-        findedPage.list = findedPage.list.filter((item) => item.id !== beer.id)
+        state.beers = state.beers.filter((item) => item.id !== beer.id)
     },
     //Экшен получения пива и добавления в стор
     async getBeers({state}){
