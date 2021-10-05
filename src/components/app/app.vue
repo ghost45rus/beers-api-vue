@@ -60,11 +60,7 @@ import noImg from "@img/no_img.png"
             nextPage(){
                 this.$store.dispatch("getBeers")
             },
-            getPageNumber(id){
-                return this.$store.getters.pageBeer(id)
-            },
             deleteBeer(id, page){
-
                 this.$store.dispatch("deleteBeer", {id: id, page:page})
             }
         },
