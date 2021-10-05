@@ -8,7 +8,6 @@ Vue.use(Vuex);
 const state = () => ({
     url: "https://api.punkapi.com/v2/beers?",
     params: {page: 1, limit: 25},
-    pages: [],
     loading: false,
     showButtonNext: true,
     beers: [],
@@ -17,14 +16,6 @@ const state = () => ({
 
 const getters = {
 
-    pageBeer: state  =>  id => {
-      state.pages.forEach(page => {
-          let obj = page.list.find(item => item.id == id)
-          if (obj != undefined){
-              return page.page
-          }
-      })
-    },
 
     loading: (state) => state.loading,
     showButtonNext: (state) => state.showButtonNext,
