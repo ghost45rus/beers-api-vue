@@ -7,7 +7,7 @@ Vue.use(Vuex);
 
 const state = () => ({
     url: "https://api.punkapi.com/v2/beers?",
-    params: {page: 11, limit: 25},
+    params: {page: 1, limit: 25},
     pages: [],
     loading: false,
     showButtonNext: true,
